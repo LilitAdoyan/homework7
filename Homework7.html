@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button1:hover {
+        color: #fff;
+        background-color: #0b7a59;
+        border-color: #1861ac;
+        border-bottom: solid #14d99d;
+
+    }
+        
+    </style>
+</head>
+
+<body>
+    <button class="button1">Click</button>
+    <script>
+        //7.1
+        class Rectangle {
+            constructor(height, width) {
+                this.height = height;
+                this.width = width;
+            }
+            getArea() {
+                return (this.width * this.height);
+            }
+            getPerimenter() {
+                return (2 * this.width + 2 * this.height);
+            }
+            toString() {
+                return `width is ${this.width} and height is ${this.height}`;
+            }
+        }
+        //7.2
+        class Employee {
+            constructor(id, firstName, lastName, position, salary, workingHours) {
+                this.id = id;
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.position = position;
+                this.salary = salary;
+                this.workingHours = workingHours;
+            }
+
+            set setFirstName(firstName) {
+                this.firstName = firstName;
+            }
+
+            set setLastName(lastName) {
+                this.lastName = lastName;
+            }
+            set setPosition(position) {
+                this.position = position;
+            }
+            set setSalary(salary) {
+                this.salary = salary;
+            }
+            set setWorkingHours(workingHours) {
+                this.workingHours = workingHours;
+            }
+            get getFullName() {
+                return this.firstName + " " + this.lastName;
+            }
+            get getAnnularSalary() {
+                return this.salary * 12;
+            }
+            raiseSalary(rate) {
+                return rate * this.salary
+            }
+        }
+        //7.3
+        class Author {
+            constructor(name, email, gender) {
+                this.name = name;
+                this.email = email;
+                this.gender = gender;
+            }
+            set setName(name) {
+                this.name = name;
+            }
+            set setEmail(email) {
+                this.email = email;
+            }
+            set setgender(gender) {
+                this.gender = gender;
+            }
+            get name() {
+                return this.name;
+            }
+            get email() {
+                return this.email;
+            }
+            get gender() {
+                return this.gender;
+            }
+            toString() {
+                return `the author is ${this.name}, email is ${this.email}, gender is ${this.gender}`;
+            }
+        }
+        class Book extends Author {
+
+        }
+    </script>
+</body>
+
+</html>
